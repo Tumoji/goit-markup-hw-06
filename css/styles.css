@@ -448,6 +448,8 @@ button:focus {
 }
 .global-footer {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   width: 1200px;
 }
 .footer-adress {
@@ -458,7 +460,7 @@ button:focus {
 .footer-social-links {
   display: flex;
   flex-direction: column;
-  padding: 60px 0 60px 94px;
+  padding: 72px 20px 60px 20px;
 }
 .footer-social-links h4 {
   color: #fff;
@@ -468,6 +470,7 @@ button:focus {
   line-height: normal;
   letter-spacing: 0.42px;
   text-transform: uppercase;
+  margin: 0;
 }
 address {
   color: #fff;
@@ -520,6 +523,7 @@ footer div .contact.mail {
 .footer-icons-list {
   display: flex;
   gap: 10px;
+  margin-top: 20px;
 }
 .footer-icons-list .icon {
   color: #fff;
@@ -715,6 +719,162 @@ footer div .contact.mail {
 
 .form-group textarea:focus,
 .form-group textarea:hover {
+  border-radius: 4px;
+  border: 1px solid var(--link-color-hover);
+  outline: none;
+}
+
+.form-group.terms-conditions-checkbox {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.checkboxes {
+  position: relative;
+  width: 16px;
+  height: 16px;
+}
+
+.form-group .checkbox {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+}
+
+.form-group:hover {
+  color: #2196f3;
+}
+
+.form-group .checkbox-checked {
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+}
+
+.terms-conditions-checkbox input {
+  display: none;
+  cursor: pointer;
+}
+
+.form-group input:checked ~ .checkboxes .checkbox-checked {
+  visibility: visible;
+}
+
+.form-group .terms-info {
+  margin-left: 8px;
+  color: #757575;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.42px;
+}
+.form-group-btn {
+  display: flex;
+  justify-content: center;
+}
+
+.terms-conditions-checkbox {
+  margin-top: 10px;
+  padding-bottom: 20px;
+}
+
+.form-group .terms-and-conditions {
+  color: #2196f3;
+  text-decoration: underline;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.42px;
+}
+
+.submit-btn {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.96px;
+  color: #fff;
+  background: #2196f3;
+  border-radius: 4px;
+  border: none;
+  padding: 10px 20px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.send-icon {
+  height: 24px;
+  width: 24px;
+}
+
+.subscribe-btn-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 23px;
+}
+
+
+.form-footer {
+  display: flex;
+  flex-direction: column;
+  padding-top: 72px;
+}
+
+.form-footer-group {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 20px;
+  gap: 12px;
+  padding-right: 10px;
+  padding-bottom: 60px;
+}
+
+.form-footer-group input {
+  color: rgba(255, 255, 255, 0.6);
+  padding: 15px 16px;
+  width: 358px;
+  height: 50px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(33, 150, 243, 0);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  background: #2f303a;
+}
+
+.form-footer-group input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 125% */
+  letter-spacing: 0.48px;
+}
+
+.form-footer span {
+  color: #fff;
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.42px;
+  text-transform: uppercase;
+}
+
+.form-footer-group input:focus,
+.form-footer-group input:hover {
   border-radius: 4px;
   border: 1px solid var(--link-color-hover);
   outline: none;
